@@ -33,6 +33,10 @@ public class stepDefs {
         driver=new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://blazedemo.com/");    
+        home = new HomePage(driver);
+        flightsPage = new FlightsPage(driver);
+        purchaseFlightPage = new PurchaseFlightPage(driver);
+        bookingConfirmationFinalPage = new BookingConfirmationFinalPage(driver);
     }
 
     @When("^User selects the Departure and Destination cities$")

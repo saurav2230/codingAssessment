@@ -32,12 +32,7 @@ public class stepDefs {
         options.setExperimentalOption("useAutomationExtension",false);
         driver=new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("https://blazedemo.com/");
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        home = new HomePage(driver);
-        flightsPage = new FlightsPage(driver);
-        purchaseFlightPage = new PurchaseFlightPage(driver);
-        bookingConfirmationFinalPage = new BookingConfirmationFinalPage(driver);
+        driver.get("https://blazedemo.com/");    
     }
 
     @When("^User selects the Departure and Destination cities$")
